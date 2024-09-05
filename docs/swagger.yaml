@@ -1,0 +1,38 @@
+basePath: /
+host: localhost:8080
+info:
+  contact:
+    name: Aaron Saikovski
+  description: An example template of a Golang simple backend API using Echo
+  license:
+    name: MIT
+  title: go-api-starter
+  version: 0.3.1
+paths:
+  /api/health:
+    get:
+      consumes:
+      - '*/*'
+      description: get the status of server.
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+      summary: Show the health status of the API.
+      tags:
+      - healthcheck
+  /api/weatherforecast:
+    get:
+      consumes:
+      - '*/*'
+      description: Sample random weatherforecast data
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+      summary: Sample weatherforecast
+      tags:
+      - sampleweatherdata
+swagger: "2.0"
